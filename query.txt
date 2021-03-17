@@ -1,0 +1,25 @@
+DELETE /pages
+
+PUT /products
+{
+  "settings": {
+    "number_of_shards": 2,
+    "number_of_replicas": 2
+  }
+}
+
+
+POST /products/_doc
+{
+  "name": "Coffee Maker",
+  "price": 64,
+  "in_stock": 10
+}
+
+
+POST /products/_doc/100
+{
+  "name": "Toaster",
+  "price": 49,
+  "in_stock": 5
+}
