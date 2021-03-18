@@ -1,0 +1,26 @@
+#upsert
+POST /products/_update/100
+{
+  "script": {
+    "source": "ctx._source.in_stock -= params.quantity",
+    "params": {
+      "quantity" : 4
+    }
+  }
+}
+
+
+GET /products/_doc/100
+
+
+#Replace
+PUT /products/_doc/100
+{
+  "name": "Toaster",
+  "price": 79,
+  "in_stock": 4
+}
+
+
+#Delete 
+DELETE /products/_doc/100
