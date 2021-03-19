@@ -1,0 +1,19 @@
+# query search
+GET /.kibana/_search
+{
+  "query": {
+    "match_all": {}
+  }
+}
+
+
+GET /_cluster/health
+
+
+GET /_cat/nodes?v
+
+
+GET /_cat/indices?v
+
+
+GET /_cat/indices?v
